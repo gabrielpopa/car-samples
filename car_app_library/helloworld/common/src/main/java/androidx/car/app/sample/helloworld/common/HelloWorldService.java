@@ -23,7 +23,6 @@ import androidx.annotation.Nullable;
 import androidx.car.app.CarAppService;
 import androidx.car.app.Screen;
 import androidx.car.app.Session;
-import androidx.car.app.SessionInfo;
 import androidx.car.app.validation.HostValidator;
 
 /**
@@ -39,9 +38,9 @@ public final class HelloWorldService extends CarAppService {
         // Exported services must have an empty public constructor.
     }
 
-    @Override
     @NonNull
-    public Session onCreateSession(@NonNull SessionInfo sessionInfo) {
+    @Override
+    public Session onCreateSession() {
         return new Session() {
             @Override
             @NonNull
